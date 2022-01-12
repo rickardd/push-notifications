@@ -5,10 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        max-width: 200px;
+        margin: 24px auto 0;
+        border: 1px solid #2f764c;
+        padding: 12px;
+      }
+
+      form > * {
+        margin-top: 0;
+        margin-bottom: 12px;
+      }
+
+      input {
+        padding: 6px;
+      }
+
+      button {
+        border: none;
+        background-color: #2f764c;
+        color: white;
+        padding: 18px;
+      }
+    </style>
   </head>
   <body>
-    hello
-
+    <form>
+      <p>Notification settings</p>
+      <input
+        type="text"
+        placeholder="Title"
+        name="title"
+        value="Survey Title"
+      />
+      <input
+        type="text"
+        placeholder="Body"
+        name="body"
+        value="Some body text"
+      />
+      <input
+        type="number"
+        min="1"
+        placeholder="Interval (sec)"
+        name="interval"
+        value="5"
+      />
+      <button type="submit">START</button>
+    </form>
     <script src="./app.js" type="module"></script>
   </body>
 </html>
