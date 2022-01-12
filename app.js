@@ -29,7 +29,7 @@ function displayNotification() {
   if (Notification.permission === "granted") {
     navigator.serviceWorker.getRegistration().then(function (reg) {
       setInterval(() => {
-        reg.showNotification(title + Math.random(), options);
+        reg.showNotification(title, options);
       }, interval);
     });
   }
